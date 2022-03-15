@@ -13,7 +13,7 @@ private:
 public:
 	Isbil(); // File parameter that reads from file
 	~Isbil(); // Delete list with pointers
-	void leggTilIsPaaLista();
+	void leggTilIsPaaLista(Iskrem* const is);
 	void skrivStedOgAntallIs();
 	void skrivAlleBilensData();
 	void skrivAlleBilensDataTilFil();
