@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include "LesData2.h"
 
 using namespace std;
 

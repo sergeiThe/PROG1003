@@ -20,7 +20,10 @@ void Isbil::skrivAlleBilensData()
 {
 	skrivStedOgAntallIs();
 
-	for (int i = 0; i < isListe.size(); i++); // Find iterator for lists
+	for (Iskrem* is : isListe)
+	{
+
+	}
 }
 
 string Isbil::bilensPlassering()

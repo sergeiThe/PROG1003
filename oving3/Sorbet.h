@@ -4,8 +4,9 @@ class Sorbet :
     public Iskrem
 {
 private:
-    enum isTyper { SORBE = 0, GRANITE, SLUSH };
+    enum iskremType { SORBE = 1, GRANITE, SLUSH };
 
+	iskremType type;
 
 public:
 	Sorbet(); // Parameter will be file pointer to read from file
