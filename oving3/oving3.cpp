@@ -19,8 +19,31 @@ vector<Isbil*> gIsbiler;
 
 int main()
 {
+	char kommando;
 
+	do
+	{
+		skrivMeny();
+		kommando = lesChar("Kommando: ");
 
+		switch (kommando)
+		{
+		case 'A':
+			skrivAlleIsBiler();
+			break;
+		case 'E':
+			skrivBilOgEvtLeggInn(false);
+			break;
+		case 'L':
+			skrivBilOgEvtLeggInn(true);
+			break;
+		case 'Q':
+			cout << "Avslutter..." << endl;
+		default: 
+			cout << "Feil kommando!" << endl;
+		}
+
+	} while (kommando != 'Q');
 
 	return 0;
 }

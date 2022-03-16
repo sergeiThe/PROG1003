@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <fstream> 
 #include "LesData2.h"
 
 using namespace std;
@@ -13,11 +14,12 @@ private:
 	int pris;
 
 public:
-	Iskrem(); // Parameter will be file pointer to read from file
+	Iskrem();
+	Iskrem(ifstream& inn);
 
 	virtual void les();
 	virtual void skrivTilSkjerm();
-	virtual void skrivTilFil();
+	virtual void skrivTilFil(ofstream& ut);
 
 };
 

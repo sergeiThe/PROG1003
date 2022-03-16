@@ -36,7 +36,7 @@ void skrivBilOgEvtLeggInn(const bool leggInn)
 		finnIsBil(sted)->skrivAlleBilensData();
 
 		if (leggInn)
-			finnIsBil(sted)->leggTilIsPaaLista();
+			finnIsBil(sted)->leggTilIsPaaLista(); // Fix
 	}
 	else
 		cout << "Isbil er ikke funnet! Tilbake til meny...";

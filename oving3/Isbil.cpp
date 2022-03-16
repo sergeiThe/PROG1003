@@ -1,13 +1,41 @@
 #include "Isbil.h"
 
+Isbil::Isbil(ifstream& inn) // Size of the list
+{
+	getline(inn, sted);
+	
+	// Figure out a way for the ice cream list
+}
+
 Isbil::~Isbil()
 {
+	for (Iskrem* is : isListe)
+		delete is;
+	
 	isListe.clear();
 }
 
-void Isbil::leggTilIsPaaLista(Iskrem* const is)
+void Isbil::leggTilIsPaaLista()
 {
-	isListe.push_back(is);
+	const int option = lesInt("Sorbet - 1, Floteis - 2", 1, 2);
+
+	if (option == 1)
+	{
+		Iskrem* is = new Sorbet();
+		is->les();
+		isListe.push_back(is);
+		is = nullptr;
+	}
+
+	if (option == 2)
+	{
+		Iskrem* is = new Floteis();
+		is->les();
+		isListe.push_back(is);
+		is = nullptr;
+	}
+
+	
 }
 
 void Isbil::skrivStedOgAntallIs()
@@ -16,7 +44,7 @@ void Isbil::skrivStedOgAntallIs()
 	cout << "Antall is: " << isListe.size() << endl;
 }
 
-void Isbil::skrivAlleBilensData()
+void Isbil::skrivAlleBilensData() // Fix
 {
 	skrivStedOgAntallIs();
 

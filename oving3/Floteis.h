@@ -8,7 +8,8 @@ private:
 
 
 public:
-	Floteis(); // Parameter will be file pointer to read from file
+	Floteis();
+	Floteis(ifstream& inn);
 
 	virtual void les();
 	virtual void skrivTilSkjerm();

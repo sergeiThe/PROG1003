@@ -1,5 +1,7 @@
 #pragma once
 #include "Iskrem.h"
+#include "Sorbet.h"
+#include "Floteis.h"
 #include <list>
 using namespace std;
 
@@ -11,9 +13,9 @@ private:
 
 
 public:
-	Isbil(); // File parameter that reads from file
-	~Isbil(); // Delete list with pointers
-	void leggTilIsPaaLista(Iskrem* const is);
+	Isbil(ifstream& inn); 
+	~Isbil();
+	void leggTilIsPaaLista();
 	void skrivStedOgAntallIs();
 	void skrivAlleBilensData();
 	void skrivAlleBilensDataTilFil();

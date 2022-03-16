@@ -1,5 +1,16 @@
 #include "Floteis.h"
 
+Floteis::Floteis(ifstream& inn)
+	: Iskrem(inn)
+{
+	string veganskOrd;
+	getline(inn, veganskOrd);
+	if (veganskOrd == "vegan")
+		erVegansk = true;
+	else
+		erVegansk = false;
+}
+
 void Floteis::les()
 {
 	Iskrem::les();
